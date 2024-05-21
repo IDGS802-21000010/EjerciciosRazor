@@ -1,0 +1,20 @@
+﻿@page
+@model ProgramasRazorII.Pages.Programa2Model
+@{
+}
+
+<h3>Cifrado Cesar</h3>
+
+<form method="post">
+    <p>Numero de desplazamiento: <input type="text" step="0.1" asp-for="n" /></p>
+
+    <p>Mensaje: <input type="text" step="0.1" asp-for="mensaje" /></p>
+   
+    <p><input type="submit" value="Cifrar" asp-page-handler="Cifrar" /></p>
+    <p><input type="submit" value="Descifrar" asp-page-handler="Descifrar" /></p>
+
+</form>
+@if (Model.res != null)
+{
+    <strong>Resultado = @Model.res</strong>
+}

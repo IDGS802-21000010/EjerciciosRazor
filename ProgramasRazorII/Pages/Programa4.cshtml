@@ -1,0 +1,25 @@
+﻿@page
+@model ProgramasRazorII.Pages.Programa4Model
+@{
+}
+
+<h3>Arreglo</h3>
+<p>Números Aleatorios:</p>
+<ul>
+    @foreach (var x in Model.numerosAleatorios)
+    {
+        <li>@x</li>
+    }
+</ul>
+
+<p>Suma: @Model.suma</p>
+<p>Media: @Model.media</p
+<p>Números Ordenados:</p>
+<ul>
+    @foreach (var x in Model.numerosAleatorios.OrderBy(n => n))
+    {
+        <li>@x</li>
+    }
+</ul>
+<p>Moda: @Model.moda</p>
+<p>Mediana: @Model.mediana</p>
